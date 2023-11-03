@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <title>Responsive Navbar</title>
+    <style>
+        *, ::after, :before {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+        }
+        li {
+            list-style-type: none;
+        }
+        .navbar{
+            width: 100vw;
+            height: 8vh;
+            box-shadow: 0 2px 35px 2px rgba(0, 0, 0, 0.2);
+        }
+
+        .header {
+            display: flex;
+            line-height: 8vh;
+            justify-content: space-between;
+        }
+
+        .header h1 {
+            font-size: 1.5rem;
+            margin-left: 2rem;
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+        }
+        .header .wrap {
+            color: cyan;
+        }
+        .hamburger {
+            line-height: 8vh;
+            font-size: 2rem;
+            margin-right: 2rem;
+        }
+
+        @media screen and (min-width: 992px) {
+            .navbar {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .hamburger{
+                display: none;
+            }
+
+            .header h1 {
+                font-size: 2rem;
+            }
+
+            .menu-links {
+                display: flex;
+                gap: 2rem;
+                font-size: 1.2rem;
+            }
+
+            .menu-links a:hover {
+                color: cyan;
+            }
+
+            .social-links {
+                display: flex;
+                margin-right: 2rem;
+                font-size: 1.5rem;
+                gap: 2rem;
+                color: cyan;
+            }
+
+        }
+
+        @media screen and (min-width: 399px) and (max-width:991px) {
+            .social-media-links {
+                display: none;
+            }
+
+            .hamburger {
+                cursor: pointer;
+            }
+
+            .menu a {
+                color: black;
+                font-family: monospace;
+            }
+
+            .menu a:hover {
+                color: cyan;
+            }
+
+            .menu {
+                position: absolute;
+                float: right;
+                margin-right: 2rem;
+                width: 40vw;
+                overflow: hidden;
+                margin-top: 1rem;
+                background-color: rgba(250, 250, 250, 0.5);
+                box-shadow: 2px 2px 35px 3px rgba(0, 0, 0, 0.2);
+                border-radius: 4px;
+                right: -100%;
+                transition: right .5s ease-in, scale .3s;
+            }
+
+
+            .show-menu {
+                right: 1%;
+            }
+
+            .menu-links {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                transition: all .3s ease;
+            }
+
+            .menu-links li:first-child {
+                margin-top:.5rem;
+            }
+
+            .menu-links li {
+                margin-bottom: .5rem;
+            }
+
+        }
+        
+
+    </style>
+</head>
+<body>
+    
+    <main>
+        <nav class="navbar">
+
+            <div class="header">
+                <h1>Codding <span class="wrap">Addict</span></h1>
+                <i class="bx bx-menu hamburger"></i>
+            </div>
+
+            <div class="menu">
+                <ul class="menu-links">
+                    <li><a href="#Home">Home</a></li>
+                    <li><a href="#Pricing">Pricing</a></li>
+                    <li><a href="#Services">Services</a></li>
+                    <li><a href="#About">About</a></li>
+                </ul>
+            </div>
+
+            <div class="social-media-links">
+                <ul class="social-links">
+                    <li><i class="bx bxl-github"></i></li>
+                    <li><i class="bx bxl-facebook"></i></li>
+                    <li><i class="bx bxl-instagram"></i></li>
+                    <li><i class="bx bxl-twitter"></i></li> 
+                </ul>
+            </div>
+
+        </nav>
+    </main>
+
+    <!-- Script -->
+    <script src="navbar.js" type="module"></script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal</title>
+    <style>
+        *, ::after, ::before {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            width: 100%;
+            height: 100vh;
+            font-family: monospace;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .container {
+            position: relative;
+            width: 25vw;
+            height: 15vh;
+            border-radius: 10px;
+            box-shadow: 3px 3px 35px 5px rgba(0, 0, 0, 0.2);
+            display: grid;
+            place-items: center;
+            transition: all .5s ease;
+        }
+
+        button {
+            background: transparent;
+            outline: none;
+            border: none;
+            font-size: 1.5rem;
+            font-family: monospace;
+            font-weight: 700;
+            text-shadow: 2px 2px 35px rgba(0, 0, 0, 0.5);
+        }
+
+        
+
+        .modal {
+            position: absolute;
+            width: 40%;
+            height: 25%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 5px;
+            box-shadow: 3px 3px 35px 5px rgba(0, 0, 0, 0.2);
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+
+            visibility: hidden;
+            transition: all .4s ease;
+        }
+
+        .show_modal  {
+            visibility: avisible;
+        }
+
+        .modal .question {
+            font-size: 1.5rem;
+            font-family: monospace;
+            margin-bottom: .5rem;
+        }
+
+        .button__container {
+            display: flex;
+            gap: 2rem;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <main>
+        <div class="container">
+            <button class="click">Click Me</button>
+        </div>
+        <div id="modal" class="modal">
+            <p class="question">Why are you gay?</p>
+            <div class="button__container">
+                <button class="btn1">Yes</button>
+                <button class="btn2">No</button>
+            </div>
+        </div>
+    </main>
+    
+    <script src="modal.js" type="module"></script>
+</body>
+</html>

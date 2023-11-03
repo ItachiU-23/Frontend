@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Carousel</title>
+    <style>
+        body {
+            height: 100vh;
+            width: 100vw;
+
+            background-color: #dbe9f4;;
+            border: none;
+            margin: none;
+            box-sizing: border-box;
+        }
+
+        main {
+            height: 100vh;
+            display: grid;
+            place-items: center;
+            
+        }
+
+        @media screen and (min-width: 768px) {
+            .container {
+                width: 50vw;
+            
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .container {
+                width: 80vw;
+                margin: 1rem;
+            }
+        }
+        
+
+        .title {
+            margin-bottom: 4rem;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            font-weight: 500;
+            font-family: monospace;
+            margin-bottom: 1rem;
+        }
+
+        .underline {
+            height: 0.25rem;
+            width: 5rem;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: hsl(205, 78%, 60%);
+        }
+
+        .review {
+            background-color: #ffffff;
+            padding: 1.5rem 2rem;
+            border-radius: 10px;
+            box-shadow: 0 0 50px 0  rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .img_container {
+            position: relative;
+            width: 150px;
+            height: 150px;
+            margin: 0 auto;
+            border-radius: 50%;
+            margin-bottom: 1.5rem;
+        }
+
+        #person_img {
+            object-fit: cover;
+            display: block;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+        }
+
+
+        #author {
+            letter-spacing: 2px;
+            font-weight: 600;
+            margin: 0 auto;
+            margin-bottom: 0.5rem;
+        }
+
+        #job {
+            letter-spacing: 1px;
+            margin: 0 auto 0.5rem auto;
+            color: hsl(205, 78%, 60%);
+            font-weight: 200;
+            font-size:0.833rem;
+        }
+
+        #description {
+            position: relative;
+            padding: 4px;
+            font-size: .875rem;
+            font-weight: 300;
+            width: 85%;
+            text-align: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: gray;
+            line-height: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .arrow_buttons {
+            margin-bottom: .5rem;
+        }
+
+        .btn-1 {
+            margin-right: 0.5rem;
+        }
+        .btn-1, .btn-2 {
+            outline: none;
+            background: transparent;
+            font-size: 1.5rem;
+            color: hsl(205, 78%, 60%);
+            height: 2rem;
+            width: 1.5rem;
+            padding: 3px;
+            border: none;
+        }
+
+        #random_profile {
+            outline: none;
+            background: transparent;
+            border: 1.5px solid hsl(205, 78%, 60%);
+            padding: 4px 8px;
+            border-radius: 5px;
+            margin: .3rem auto;
+        }
+
+       
+        
+    </style>
+</head>
+<body>
+    <main>
+
+        <section class="container">
+            <div class="title">
+                <h2>Our Reviews</h2>
+                <div class="underline"></div>
+            </div>
+            <!-- Review -->
+            <article class="review">
+                <div class="img_container">
+                    <img id="person_img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjLejMWAMeU8ra4vu2INSgVPe0INxrrV6Emw&usqp=CAU" alt="profile-picture">
+                </div>
+
+                <h4 id="author">Sarah Jones</h4>
+                <p id="job">UX Designer</p>
+                <div id="description">
+                    <p class="intro">A job description is a tool that explains the tasks, duties, function and responsibilities of a position. It details who performs a specific type of work, how that work is to be completed, and the frequency and the purpose of the work as it relates to the organization's mission and goals.</p>
+                </div>
+                <div class="arrow_buttons">
+                    <button class="btn-1"><</button>
+                    <button class="btn-2">></button>
+                </div>
+                <button id="random_profile">Surprise Me</button>
+            </article>
+
+        </section>
+
+    </main>
+
+    <script src="reviewCarousel.js" type="module"></script>
+</body>
+</html>
